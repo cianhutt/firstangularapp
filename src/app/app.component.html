@@ -1,0 +1,29 @@
+<header>
+  <h1>FIRSTAPP</h1>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Movies</li>
+    </ul>
+  </nav>
+</header>
+<h1>1 Way Binding</h1>
+<div class="firstdiv">
+  <p>Youve clicked <button (click)="countClick()">me</button>{{ clickCounter }} times</p>
+</div>
+<h1>2 Way Binding</h1>
+<div>
+  <input type="text" [(ngModel)]="name">
+  <br>
+  <p>You said: </p> {{name}}
+</div>
+
+<div>
+  <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+   <p>The click counter is greater than 4</p>
+  </ng-template>
+  <ng-template #none>
+    <p>The click counter is not greater than 4</p>
+
+  </ng-template>
+</div>
